@@ -1,0 +1,4 @@
+.venv/
+.env
+fastapi_authorization.md
+JWT.md
