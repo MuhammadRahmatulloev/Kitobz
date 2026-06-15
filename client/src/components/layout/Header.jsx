@@ -86,6 +86,7 @@ const Header = () => {
                                         <Link to="/help/register" className="dropdown-item">Как зарегистрироваться</Link>
                                         <Link to="/help/order" className="dropdown-item">Как сделать заказ</Link>
                                         <Link to="/help/installment" className="dropdown-item">Рассрочка</Link>
+                                        <Link to="/kitobzik" className="dropdown-item">Что такое статус KITOBZIK?</Link>
                                     </div>
                                 )}
                             </div>
@@ -109,6 +110,7 @@ const Header = () => {
                                             <>
                                                 <Link to="/profile" className="dropdown-item">Мой профиль</Link>
                                                 <Link to="/orders" className="dropdown-item">История заказов</Link>
+                                                <Link to="/kitobzik" className="dropdown-item">KITOBZIK</Link>
                                                 {(user.role === "admin" || user.role === "moderator") && (
                                                     <Link to="/admin" className="dropdown-item">Админ панель</Link>
                                                 )}

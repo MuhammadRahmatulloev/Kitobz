@@ -4,6 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from models.models import User
 from repositories.user_repo import user_repo
 from core.auth import hash_password, verify_password, create_access_token
+from core.mail import send_registration_email
 
 
 ALLOWED_ROLES = ["user", "moderator", "admin"]
@@ -28,7 +29,19 @@ class UserService:
         if password:
             kwargs["password_hash"] = hash_password(password)
 
-        return await user_repo.create(db, **kwargs)
+        user = await user_repo.create(db, **kwargs)
+
+        if email and password:
+            try:
+                await send_registration_email(
+                    to_email=email,
+                    username=user.username or email,
+                    password=password
+                )
+            except Exception:
+                pass
+
+        return user
 
     async def login(self, db: AsyncSession, email: str, password: str) -> dict:
         user = await user_repo.get_by_email(db, email)

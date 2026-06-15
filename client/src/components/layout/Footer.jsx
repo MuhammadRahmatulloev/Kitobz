@@ -54,7 +54,7 @@ const Footer = () => {
                         <h4 className="footer-col-title">Помощь</h4>
                         <Link to="/help/delivery" className="footer-link">Доставка</Link>
                         <Link to="/help/installment" className="footer-link">Рассрочка</Link>
-                        <Link to="/about" className="footer-link">О KITOBZ-е</Link>
+                        <Link to="/kitobzik" className="footer-link">О KITOBZ-е</Link>
                     </div>
                     <div className="footer-col">
                         <h4 className="footer-col-title">Дополнительно</h4>
@@ -66,7 +66,7 @@ const Footer = () => {
                         <h4 className="footer-col-title">Мой кабинет</h4>
                         <Link to="/login" className="footer-link">Вход / Регистрация</Link>
                         <Link to="/orders" className="footer-link">История заказов</Link>
-                        <Link to="/profile" className="footer-link">KITOBZIK</Link>
+                        <Link to="/kitobzik" className="footer-link">KITOBZIK</Link>
                     </div>
                     <div className="footer-col">
                         <h4 className="footer-col-title">Контакты</h4>

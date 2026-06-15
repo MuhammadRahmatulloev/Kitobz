@@ -18,6 +18,11 @@ import AdminUsers from "./pages/admin/AdminUsers"
 import AdminOrders from "./pages/admin/AdminOrders"
 import "./App.css"
 import Checkout from "./pages/Checkout"
+import Delivery from "./pages/Delivery"
+import HowToRegister from "./pages/HowToRegister"
+import HowToOrder from "./pages/HowToOrder"
+import Installment from "./pages/Installment"
+import Kitobzik from "./pages/Kitobzik"
 
 const App = () => {
     return (
@@ -37,6 +42,11 @@ const App = () => {
                                 <Route path="login" element={<Login />} />
                                 <Route path="register" element={<Register />} />
                                 <Route path="favorites" element={<Favorites />} />
+                                <Route path="help/delivery" element={<Delivery />} />
+                                <Route path="help/register" element={<HowToRegister />} />
+                                <Route path="help/order" element={<HowToOrder />} />
+                                <Route path="help/installment" element={<Installment />} />
+                                <Route path="kitobzik" element={<Kitobzik />} />
                                 <Route path="admin" element={<Dashboard />} />
                                 <Route path="admin/books" element={<AdminBooks />} />
                                 <Route path="admin/users" element={<AdminUsers />} />
